@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Block YouTube Shorts",
+  "version": "1.0",
+  "description": "Block YouTube Shorts and focus on your work.",
+  "permissions": ["activeTab", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "css": ["script.css"]
+    },
+    {
+      "matches": ["https://www.youtube.com/shorts*"],
+      "css": ["script.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
